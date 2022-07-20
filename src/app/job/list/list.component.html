@@ -1,0 +1,9 @@
+<div *ngIf="isloading">
+    Loading..................
+</div>
+<div *ngIf="!isloading">
+    <div class="card" *ngFor="let item of data">
+{{item.Name}}
+</div>
+<app-pagination [Size]="Size" [Index]="Index" [Count]="Pages" (change)="pageChanged(0)"></app-pagination>
+</div>

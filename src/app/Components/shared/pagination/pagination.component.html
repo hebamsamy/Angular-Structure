@@ -1,0 +1,13 @@
+<nav aria-label="...">
+    <ul class="pagination">
+      <li class="page-item " [ngClass]="{disabled: Index==1}" (click)="decre()">
+        <span class="page-link">Previous</span>
+      </li>
+      <li *ngFor="let item of arr" class="page-item" [ngClass]="{active: false}">
+        <button class="page-link" (click)="handle(item)"></button>
+    </li>
+      <li class="page-item" [ngClass]="{disabled: Index==Count} " (click)="incre()">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
